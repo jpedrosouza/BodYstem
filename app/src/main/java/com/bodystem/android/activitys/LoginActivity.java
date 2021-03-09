@@ -6,12 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.bodystem.android.utils.Auth;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.bodystem.android.R;
 
 public class LoginActivity extends AppCompatActivity {
+
+    Auth auth = new Auth();
 
     MaterialToolbar toolbar;
     TextInputEditText inputEditTextEmail, inputEditTextPassword;
@@ -42,10 +45,11 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    // TODO: Realiza o login do usuário no aplicativo.
     private void login() {
         String email =  inputEditTextEmail.getText().toString();
         String password = inputEditTextPassword.getText().toString();
+
+        auth.signIn(email, password, LoginActivity.this);
     }
 
 }

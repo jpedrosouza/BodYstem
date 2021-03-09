@@ -17,61 +17,74 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/roboto_light"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_medium"
         android:text="Como deseja entrar?"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonHaveAccount"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:height="55dp"
-        android:layout_marginTop="40dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="30dp"
+        android:height="55dp"
         android:backgroundTint="@android:color/white"
-        app:cornerRadius="10dp"
+        android:fontFamily="@font/roboto_black"
         android:text="Possuo uma conta"
-        android:fontFamily="@font/roboto_light"
-        android:textSize="17sp"
-        android:textColor="#023301"
         android:textAllCaps="false"
-        />
+        android:textColor="#023301"
+        android:textSize="17sp"
+        app:cornerRadius="10dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:height="55dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
+        android:height="55dp"
         android:backgroundTint="@android:color/white"
-        app:cornerRadius="10dp"
+        android:fontFamily="@font/roboto_black"
         android:text="Quero me cadastrar"
-        android:fontFamily="@font/roboto_light"
-        android:textSize="17sp"
-        android:textColor="#023301"
         android:textAllCaps="false"
-        />
+        android:textColor="#023301"
+        android:textSize="17sp"
+        app:cornerRadius="10dp" />
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonInvite"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:backgroundTint="@android:color/white"
-        app:cornerRadius="10dp"
+        android:fontFamily="@font/roboto_black"
         android:text="Como convidado"
-        android:fontFamily="@font/roboto_light"
-        android:textSize="17sp"
-        android:textColor="#023301"
         android:textAllCaps="false"
-        />
+        android:textColor="#023301"
+        android:textSize="17sp"
+        app:cornerRadius="10dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@android:color/white"
+        android:fontFamily="@font/roboto_black"
+        android:text="Administrador"
+        android:textAllCaps="false"
+        android:textColor="#023301"
+        android:textSize="17sp"
+        app:cornerRadius="10dp" />
 
 </LinearLayout>

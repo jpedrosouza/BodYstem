@@ -5,13 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.bodystem.android.R;
+import com.bodystem.android.utils.Auth;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class RegisterActivity extends AppCompatActivity {
+
+    Auth auth = new Auth();
 
     MaterialToolbar toolbar;
     TextInputEditText inputEditTextEmail, inputEditTextName, inputEditTextPassword;
@@ -47,6 +51,15 @@ public class RegisterActivity extends AppCompatActivity {
 
     // TODO: Realiza o registro do usuário no FirebaseAuth e no Banco de Dados.
     private void register() {
+        String email = inputEditTextEmail.getText().toString();
+        String name = inputEditTextName.getText().toString();
+        String password = inputEditTextPassword.getText().toString();
+        String confirmPassword = inputEditTextConfirmPassword.getText().toString();
 
+        if (password.equals(confirmPassword)) {
+            auth.createUser(email, password, name, RegisterActivity.this);
+        } else {
+            Toast.makeText(this, "Insira senhas iguais", Toast.LENGTH_SHORT).show();
+        }
     }
 }

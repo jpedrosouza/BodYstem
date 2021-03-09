@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.bodystem.android.activitys.RegisterActivity"></activity>
-        <activity android:name="com.bodystem.android.activitys.LoginActivity" />
-        <activity android:name="com.bodystem.android.activitys.MainActivity">
+        <activity android:name=".activitys.AdminLoginActivity"></activity>
+        <activity android:name=".activitys.RegisterActivity" />
+        <activity android:name=".activitys.LoginActivity" />
+        <activity android:name=".activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

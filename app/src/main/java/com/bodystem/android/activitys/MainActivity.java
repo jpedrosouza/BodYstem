@@ -1,18 +1,17 @@
 package com.bodystem.android.activitys;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.button.MaterialButton;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bodystem.android.R;
+import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    MaterialButton buttonLogin, buttonRegister, buttonInvite;
+    MaterialButton buttonLogin, buttonRegister, buttonInvite, buttonAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         buttonLogin = findViewById(R.id.buttonHaveAccount);
         buttonRegister = findViewById(R.id.buttonRegister);
         buttonInvite = findViewById(R.id.buttonInvite);
+        buttonAdmin = findViewById(R.id.buttonAdmin);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+            }
+        });
+
+        buttonAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AdminLoginActivity.class));
             }
         });
     }
