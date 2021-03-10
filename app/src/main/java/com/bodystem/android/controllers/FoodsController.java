@@ -1,7 +1,11 @@
 package com.bodystem.android.controllers;
 
+import androidx.annotation.NonNull;
+
+import com.bodystem.android.models.FoodsModel;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -9,6 +13,8 @@ import java.util.Map;
 
 public class FoodsController {
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+
+    volatile FoodsModel foodsModel = null;
 
     public void createFood(String name, String typeId, double calories) {
         final Map<String, Object> dataFood = new HashMap<>();

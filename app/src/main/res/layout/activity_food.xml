@@ -1,9 +1,304 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
     tools:context=".activitys.FoodActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBarFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24"
+                    app:title="Datalhes"
+                    app:titleTextColor="@android:color/white"
+                    android:background="@color/colorPrimaryDark"
+                    style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                    />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <TextView
+                android:id="@+id/textViewFoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:fontFamily="@font/roboto_black"
+                android:textColor="@android:color/white"
+                android:text=""
+                android:textSize="20dp"
+                android:elevation="5dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="1 porção (400g)"
+                android:textColor="@android:color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:text="Informações úteis"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Calorias: "
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewCalories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="371"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:text="Tempo de exercício por porção"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Caminhada: "
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewCaminhada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="74 minutos"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Corrida: "
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewCorrida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="24 minutos"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Mountain Bike: "
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewMountainBike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="31 minutos"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Cozinhar: "
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewCozinhar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="132 minutos"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Dormir: "
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewDormir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="371 minutos"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Estudar: "
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewEstudar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="185 minutos"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="Futebol: "
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black"/>
+
+                    <TextView
+                        android:id="@+id/textViewFutebol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="41 minutos"
+                        android:fontFamily="@font/roboto_light"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
