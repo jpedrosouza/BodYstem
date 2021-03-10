@@ -1,14 +1,14 @@
-package com.bodystem.android.activitys;
+package com.bodystem.android.activitys.admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 import com.bodystem.android.R;
+import com.bodystem.android.activitys.MainActivity;
 import com.bodystem.android.controllers.UserController;
 import com.bodystem.android.utils.Auth;
 import com.google.android.material.appbar.MaterialToolbar;

@@ -2,17 +2,18 @@ package com.bodystem.android.utils;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.bodystem.android.activitys.CategoriesActivity;
 import com.bodystem.android.activitys.MainActivity;
-import com.bodystem.android.activitys.RegisterActivity;
+import com.bodystem.android.activitys.admin.AdminTypesActivity;
 import com.bodystem.android.controllers.UserController;
 import com.bodystem.android.models.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,9 +32,9 @@ public class Auth {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     if (userController.checkAdmin(email)) {
-                        context.startActivity(new Intent(context, MainActivity.class));
+                        context.startActivity(new Intent(context, CategoriesActivity.class));
                     } else {
-                        context.startActivity(new Intent(context, MainActivity.class));
+                        context.startActivity(new Intent(context, AdminTypesActivity.class));
                     }
                 } else {
                     Toast.makeText(context, "Usuário ou senha incorretos.", Toast.LENGTH_SHORT)
@@ -47,6 +48,16 @@ public class Auth {
                         .show();
             }
         });
+    }
+
+    public void signGuest(final Context context) {
+        firebaseAuth.signInAnonymously()
+                .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                    @Override
+                    public void onSuccess(AuthResult authResult) {
+                        context.startActivity(new Intent(context, CategoriesActivity.class));
+                    }
+                });
     }
 
     public void createUser(final String email, String password, final String name, final Context context) {

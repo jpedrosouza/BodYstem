@@ -1,14 +1,10 @@
 package com.bodystem.android.controllers;
 
-import android.content.Context;
-
 import androidx.annotation.NonNull;
 
 import com.bodystem.android.models.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -34,8 +30,8 @@ public class UserController {
                 .add(userData);
     }
 
+    // TODO: CHECA SE O USUÁRIO POSSUI PERMISSÃO DE ADMINISTRADOR NO APLICATIVO
     public boolean checkAdmin(String email) {
-
         firebaseFirestore.collection("users")
                 .whereEqualTo("email", email)
                 .get()

@@ -7,9 +7,12 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bodystem.android.R;
+import com.bodystem.android.activitys.admin.AdminLoginActivity;
+import com.bodystem.android.utils.Auth;
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
+    Auth auth = new Auth();
 
     MaterialButton buttonLogin, buttonRegister, buttonInvite, buttonAdmin;
 
@@ -34,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+            }
+        });
+
+        buttonInvite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signGuest(MainActivity.this);
             }
         });
 
